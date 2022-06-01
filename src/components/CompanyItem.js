@@ -46,9 +46,9 @@ const CompanyItem = (props) => {
                 left={(props) => <Avatar.Icon {...props} color={'white'} style={{backgroundColor: '#941a1d'}} icon="group" />}
                 />                  
                 <Card.Content>
-                    {props.companies.names.map((name) => {
+                    {props.companies.names.map((name,key) => {
                         return (
-                            <Text style={styles.employeeName}>
+                            <Text style={styles.employeeName} key={key}>
                                 {name.firstName} {name.lastName}
                             </Text>
                         )
